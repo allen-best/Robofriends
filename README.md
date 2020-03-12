@@ -8,3 +8,7 @@ In the react project there will be a list of cards with imported data from a pre
 
 This includes a name and email on each card.
 
+## SearchBox
+
+Filters the cards by the name on demand by the search box.
+
