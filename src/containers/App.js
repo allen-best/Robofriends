@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import CardList from './CardList'
-import SearchBox from './SearchBox'
-import Scroll from './Scroll'
-import ErrorBoundry from './ErrorBoundry'
+import CardList from '../components/CardList'
+import SearchBox from '../components/SearchBox'
+import Scroll from '../components/Scroll'
+import ErrorBoundry from '../components/ErrorBoundry'
 import './App.css';
 
 class App extends Component {
@@ -15,6 +15,7 @@ class App extends Component {
 	}
 
 	componentDidMount(){
+		console.log(this.props.store.getState())
 		fetch('https://jsonplaceholder.typicode.com/users')
 			.then(response => response.json() )
 			.then(users => this.setState({ 'robots':users }));
